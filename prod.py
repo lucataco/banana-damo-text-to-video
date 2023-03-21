@@ -1,13 +1,16 @@
 # This file is used to verify your http server acts as expected
 # Run it with `python3 test.py`
 import base64
-import requests
+import banana_dev as banana
 
 model_inputs = {'prompt': 'A panda eating bamboo on a rock.'}
 
-res = requests.post('http://localhost:8000/', json = model_inputs)
+api_key=""
+model_key=""
+res = banana.run(api_key, model_key, model_inputs)
+out = res["modelOutputs"][0]
 
-video_byte_string = res.json()["mp4_bytes"]
+video_byte_string = out["mp4_bytes"]
 video_encoded = video_byte_string.encode('utf-8')
 video_bytes = base64.b64decode(video_encoded)
 

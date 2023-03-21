@@ -1,0 +1,11 @@
+{
+    "name": "damo-text-2-video",
+    "category": "Multimodal",
+    "example_input": {
+        "prompt":"A panda eating bamboo on a rock."
+    },
+    "example_output": {
+        "mp4_bytes": "<MP4_BYTES>"
+    },
+    "version": "1"
+  }

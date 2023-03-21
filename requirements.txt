@@ -1,3 +1,7 @@
 sanic==22.6.2
 transformers
 accelerate
+modelscope
+open_clip_torch
+pytorch_lightning
+opencv-python
